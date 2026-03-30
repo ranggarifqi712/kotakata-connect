@@ -25,6 +25,9 @@ const Quests = () => {
                 {quest.title}
               </h3>
               {quest.completed && <span className="text-accent text-sm">✓</span>}
+              {quest.nftReward && !quest.completed && (
+                <span className="text-[10px] py-0.5 px-2 rounded-full bg-primary/20 text-primary font-medium">🏅 NFT</span>
+              )}
             </div>
             <p className="text-xs text-muted-foreground mb-3">{quest.description}</p>
 
