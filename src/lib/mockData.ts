@@ -18,10 +18,10 @@ export const mockRooms = [
 ];
 
 export const mockQuests = [
-  { id: "1", title: "Introduce yourself in English", description: "Join a voice room and introduce yourself", xp: 50, tokens: 10, progress: 0, total: 1, completed: false },
-  { id: "2", title: "Discuss today's stream", description: "Talk about a VTuber stream you watched", xp: 75, tokens: 15, progress: 0, total: 1, completed: false },
-  { id: "3", title: "Learn 5 new words", description: "Use 5 new vocabulary words in conversation", xp: 100, tokens: 20, progress: 3, total: 5, completed: false },
-  { id: "4", title: "Help a Kouhai", description: "Spend 10 minutes mentoring someone", xp: 150, tokens: 30, progress: 1, total: 1, completed: true },
+  { id: "1", title: "Introduce yourself in English", description: "Join a voice room and introduce yourself", xp: 50, tokens: 10, progress: 0, total: 1, completed: false, nftReward: false },
+  { id: "2", title: "Discuss today's stream", description: "Talk about a VTuber stream you watched", xp: 75, tokens: 15, progress: 0, total: 1, completed: false, nftReward: false },
+  { id: "3", title: "Learn 5 new words", description: "Use 5 new vocabulary words in conversation", xp: 100, tokens: 20, progress: 3, total: 5, completed: false, nftReward: true },
+  { id: "4", title: "Help a Kouhai", description: "Spend 10 minutes mentoring someone", xp: 150, tokens: 30, progress: 1, total: 1, completed: true, nftReward: true },
 ];
 
 export const mockSenpais = [
@@ -43,4 +43,48 @@ export const mockRewards = [
   { id: "2", title: "VTuber Session Ticket", description: "Join a live VTuber-led session", cost: 100, icon: "🎟️" },
   { id: "3", title: "Custom Avatar Frame", description: "Get a unique profile frame", cost: 30, icon: "🖼️" },
   { id: "4", title: "Oshi Badge", description: "Show your favorite VTuber badge", cost: 20, icon: "🏅" },
+];
+
+export const mockWallet = {
+  balance: 120,
+  accountId: "KTK-7829-X4A1",
+  history: [
+    { id: "1", type: "earned" as const, amount: 50, description: "Quest: Introduce yourself", date: "2026-03-28" },
+    { id: "2", type: "earned" as const, amount: 30, description: "Quest: Help a Kouhai", date: "2026-03-27" },
+    { id: "3", type: "spent" as const, amount: 20, description: "Oshi Badge", date: "2026-03-26" },
+    { id: "4", type: "earned" as const, amount: 75, description: "Quest: Discuss today's stream", date: "2026-03-25" },
+  ],
+};
+
+export const mockCertificates = [
+  {
+    id: "nft-001",
+    title: "Beginner Speaking Completed",
+    description: "Successfully completed all beginner-level speaking quests",
+    userName: "Kouhai",
+    dateEarned: "2026-03-15",
+    level: "Beginner" as const,
+    tokenId: "#0001",
+    image: "🎓",
+  },
+  {
+    id: "nft-002",
+    title: "First Voice Room Session",
+    description: "Joined and participated in your first voice room",
+    userName: "Kouhai",
+    dateEarned: "2026-03-10",
+    level: "Beginner" as const,
+    tokenId: "#0002",
+    image: "🎙️",
+  },
+  {
+    id: "nft-003",
+    title: "Senpai Helper Badge",
+    description: "Helped 5 Kouhais in voice rooms",
+    userName: "Kouhai",
+    dateEarned: "2026-03-20",
+    level: "Intermediate" as const,
+    tokenId: "#0003",
+    image: "🌟",
+  },
 ];

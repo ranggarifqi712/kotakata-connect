@@ -1,11 +1,12 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { Home, MessageSquare, Trophy, GraduationCap } from "lucide-react";
+import { Home, Trophy, GraduationCap, Award, Coins } from "lucide-react";
 
 const navItems = [
   { path: "/home", icon: Home, label: "Home" },
   { path: "/quests", icon: Trophy, label: "Quests" },
+  { path: "/certificates", icon: Award, label: "Badges" },
   { path: "/progression", icon: GraduationCap, label: "Level" },
-  { path: "/tokens", icon: MessageSquare, label: "Tokens" },
+  { path: "/tokens", icon: Coins, label: "Tokens" },
 ];
 
 const BottomNav = () => {

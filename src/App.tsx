@@ -12,6 +12,7 @@ import Quests from "./pages/Quests";
 import Tokens from "./pages/Tokens";
 import VTuberSession from "./pages/VTuberSession";
 import ClassProgression from "./pages/ClassProgression";
+import Certificates from "./pages/Certificates";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/tokens" element={<Tokens />} />
             <Route path="/vtuber-session" element={<VTuberSession />} />
             <Route path="/progression" element={<ClassProgression />} />
+            <Route path="/certificates" element={<Certificates />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <BottomNav />
